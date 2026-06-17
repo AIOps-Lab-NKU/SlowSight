@@ -1,0 +1,56 @@
+[
+    {
+        "metric_name": "disk_svctm",
+        "component_type": "disk",
+        "failure_patterns": [
+            {
+                "trend": "increasing",
+                "related_metrics": [
+                    {
+                        "metric": "disk_util",
+                        "expected_trend": "increasing"
+                    },
+                    {
+                        "metric": "disk_iops",
+                        "expected_trend": "decreasing"
+                    }
+                ],
+                "probable_causes": [
+                    "Deterioration of disk mechanical components.",
+                    "Storage media performance degradation."
+                ],
+                "mitigation_measures": [
+                    "Check disk for SMART log.",
+                    "Consider data migration and disk replacement."
+                ]
+            }
+        ]
+    },
+    {
+        "metric_name": "TCPTimeouts",
+        "component_type": "nic",
+        "failure_patterns": [
+            {
+                "trend": "increasing",
+                "related_metrics": [
+                    {
+                        "metric": "RetransSegs",
+                        "expected_trend": "increasing"
+                    },
+                    {
+                        "metric": "TCPSynRetrans",
+                        "expected_trend": "increasing"
+                    }
+                ],
+                "probable_causes": [
+                    "Network congestion leading to increased latency and packet drops.",
+                    "Physical layer issues (faulty cables, NIC port errors, switch problems)."
+                ],
+                "mitigation_measures": [
+                    "Check for congestion at switches/routers (buffer drops, queueing delays).",
+                    "Consider upgrading network bandwidth if congestion is persistent."
+                ]
+            }
+        ]
+    }
+]

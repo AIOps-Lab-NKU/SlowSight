@@ -1,0 +1,95 @@
+# Dataset configuration #FIXME
+# # No faults in the training set
+
+# D3
+train_start: 2025-4-13 16:00:00
+train_end: 2025-4-18 15:59:00
+valid_start: 2025-4-18 15:59:00
+valid_end: 2025-4-20 15:59:00
+test_start: 2025-02-25 01:59:00
+test_end: 2025-03-10 01:59:00
+
+smooth_window: 18 # Smoothing granularity 18 12 36 24 6
+train_data_filter: False # Whether to use DMD filtering for the training set data False True
+
+# Utils configuration
+max_epochs: 10
+batch_size: 50
+window_size: 38
+z_dims: 50
+encoder_nn_size: None # `None` means that nn_size is `(input_dims // 2, input_dims // 4)`
+deocder_nn_size: None
+alpha: 0.1 # The smaller, the more sensitive to anomalies
+preprocess_type: standard #minmax standard clip
+clip_alpha: 20
+## spot parameters
+q: 1e-2
+level: 0.98
+
+# TransGAN configuration
+# seq_len: 100
+finetune_epochs: 3
+seq_len: 38
+pred_len: 0
+d_model: 128
+d_ff: 128
+e_layers: 3
+# data_batch_size: 128
+data_batch_size: 50
+train_epochs: 10
+dropout: 0.1
+n_heads: 8
+factor: 1
+learning_rate: 0.0001
+patience: 3
+activation: gelu
+d_entity: 64
+num_entities: 12
+total_metrics: 24
+weight_decay: 0.01
+max_len: 5000
+
+# Output configuration
+model_dir: model
+result_dir: result
+train_score_filename: train_score.npy
+test_score_filename: test_score.npy
+all_scores: all_scores.npy
+reconstruct_error: reconstruct_error.npy
+test_reconstruct_error: test_reconstruct_error.npy
+train_reconstruct_error: train_reconstruct_error.npy
+train_G: train_G.npy
+test_G: test_G.npy
+train_G_D: train_G_D.npy
+test_G_D: test_G_D.npy
+all_G_D: all_G_D.npy
+all_processed_data: all_processed_data.npy
+x_all_origin: all_origin_data.npy
+all_times: all_times.npy
+features: features.npy
+## Operation record command
+# record: mul-gaussdb
+record: mul-net
+
+# report configuration
+history_labels_name: result.csv
+peer_labels_name: peer_result_dbscan.csv
+merged_labels_name: merged_result.csv
+merged_results_name: merged_result.json
+
+# shape classifier configuration
+shape_type: 3
+shape_seq_length: 20
+shape_model_name: test_model.pt
+shape_pattern_name: test_pattern.json
+
+# peer evaluation configuration
+peer_eval_func: cluster
+max_workers: 8
+downsample_factor: 1
+sakoe_chiba_width: 10
+dbscan_eps: 0.3
+dbscan_min_samples: 5
+n_components: 2
+dtw_result_name: dtw_result.csv
+dbscan_result_name: dbscan_result.csv

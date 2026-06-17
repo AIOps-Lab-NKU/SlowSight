@@ -1,0 +1,18 @@
+{
+  "input_csv": "metric.csv",
+  "input_json": "metric_candidates.json",
+  "line_result": "disk_result",
+  "scatter_result": "dbscan_result",
+  "dataset_dir": "data",
+  "result_dir": "result",
+  "dataset_json": "file_info.json",
+  "result_json": "result_info.json",
+  "scatter_method": [
+    "SlowSight",
+    "DBSCAN",
+    "Kmeans"
+  ],
+  "line_method": [
+    "SlowSight"
+  ]
+}

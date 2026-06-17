@@ -1,0 +1,28 @@
+{
+    "D3": {
+        "host": {
+            "ids": [
+                "aiops-k8s-04-223.193.36.109",
+                "aiops-k8s-05-223.193.36.113",
+                "k8s-master3-223.193.36.124",
+                "k8s-master2-223.193.36.126",
+                "k8s-master1-223.193.36.127",
+                "aiops-k8s-06-223.193.36.128",
+                "aiops-k8s-07-223.193.36.129",
+                "aiops-k8s-08-223.193.36.130",
+                "aiops-k8s-01-223.193.36.56",
+                "aiops-k8s-02-223.193.36.88",
+                "aiops-k8s-03-223.193.36.89"
+            ],
+            "metrics": [
+                "node-netstat-Tcp-PassiveOpens",
+                "node-sockstat-TCP-orphan",
+                "node-netstat-TcpExt-TCPSynRetrans",
+                "node-netstat-TcpExt-TCPTimeouts",
+                "node-netstat-Tcp-InSegs",
+                "node-netstat-Tcp-RetransSegs",
+                "node-netstat-Tcp-OutSegs"
+            ]
+        }
+    }
+}
