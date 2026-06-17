@@ -101,7 +101,7 @@ To expedite the process, you may use the pre‑generated model directly. If rege
 ---
 ### 1.7 Demo Video
 
-<video src="./assets/slowSight-demo.mp4" width="850" controls autoplay="false"></video>
+Our demo video is located in the assets folder and is available for you to download and view.
 ---
 
 # 2. Framework Design
