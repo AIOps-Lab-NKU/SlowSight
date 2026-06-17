@@ -278,7 +278,7 @@ SlowSight/
 
 # 4. End-to-End Workflow
 
-The complete workflow follows the architecture presented in in this Figure.
+The complete workflow follows the architecture presented in in this figure.
 
 <img src="./assets/framework.png" width="750">
 
