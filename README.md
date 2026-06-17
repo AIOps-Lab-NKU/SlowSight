@@ -279,7 +279,7 @@ SlowSight/
 
 The complete workflow follows the architecture presented in in this Figure.
 
-<img src="./assets/framework.pdf" width="750">
+<img src="./assets/framework.png" width="750">
 
 1. Data Preparation
 2. Historical Deviation Detection
