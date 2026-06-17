@@ -288,7 +288,6 @@ The complete workflow follows the architecture presented in in this figure.
 4. Knowledge-Driven Filtering
 5. Anomaly Segment Construction and Representation
 6. Scalable Sampling and Labeling
-7. Interactive Labeling Interface
 
 The final output is a set of fail-slow labels generated through pattern-centric labeling and operator verification.
 
